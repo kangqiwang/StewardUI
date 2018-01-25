@@ -1,0 +1,5 @@
+.AnchorPane(
+    -fx-background-image: url("background_image.jpg");
+    -fx-background-position: center center;
+	-fx-background-repeat: stretch; 
+}

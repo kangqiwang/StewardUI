@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Check_2_controller">
+   <children>
+      <TableView fx:id="Check_2_tableview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="data_id" prefWidth="75.0" text="管理编号" />
+          <TableColumn fx:id="device_position" prefWidth="75.0" text="布置建筑" />
+            <TableColumn fx:id="device_type" prefWidth="75.0" text="设备类型" />
+            <TableColumn fx:id="device_id" prefWidth="75.0" text="设备编号" />
+            <TableColumn prefWidth="75.0" text="运行参数">
+               <columns>
+                  <TableColumn fx:id="dynamic_a_phase_voltage" prefWidth="75.0" text="工作电压" />
+                  <TableColumn fx:id="dynamic_a_phase_current" prefWidth="75.0" text="工作电流" />
+                  <TableColumn fx:id="total_working_time" prefWidth="75.0" text="在机时间" />
+                  <TableColumn fx:id="total_energy_consumption" prefWidth="75.0" text="功耗积累" />
+               </columns>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

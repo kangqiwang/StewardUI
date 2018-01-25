@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ensemble.samples.graphics.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.VirtulControl_controller">
+   <children>
+      <HBox prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="200.0">
+               <children>
+                  <SplitPane dividerPositions="0.32974910394265233" orientation="VERTICAL" prefHeight="400.0" prefWidth="161.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" spacing="2.0" HBox.hgrow="SOMETIMES">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" text="当前时间：" VBox.vgrow="SOMETIMES">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label layoutX="45.0" layoutY="14.0" maxHeight="1.7976931348623157E308" text="启动时间：" VBox.vgrow="SOMETIMES">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="44.0" maxHeight="1.7976931348623157E308" text="物业公司：" VBox.vgrow="SOMETIMES">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="61.0" maxHeight="1.7976931348623157E308" text="操作员工：" VBox.vgrow="SOMETIMES">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox layoutX="49.0" layoutY="14.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="start_time" layoutX="49.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textOverrun="CLIP" VBox.vgrow="ALWAYS" />
+                                          <Label fx:id="current_time" layoutX="49.0" layoutY="29.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                          <Label fx:id="company" layoutX="49.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                          <Label fx:id="operator" layoutX="49.0" layoutY="76.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="text_warning" editable="false" layoutX="49.0" layoutY="14.0" text="警告：&#10;&#9;本系统操作员须为物业指定员工，非指定员工请误操作，否则所造成的不良后果将承担相应的法律责任。" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <right>
+                        <SplitPane dividerPositions="0.5301507537688442" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Circle fx:id="start_light" fill="#f4f4f4" layoutX="99.0" layoutY="145.0" radius="100.0" stroke="#f4f4f4" strokeType="INSIDE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ImageView fx:id="animation_imageView" fitHeight="253.0" fitWidth="200.0" layoutX="-4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </right>
+                     <bottom>
+                        <AnchorPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox spacing="10.0">
+                                       <children>
+                                          <Label text="手动">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider fx:id="auto_or_manual" blockIncrement="5.0" majorTickUnit="2.0" max="1.0" minorTickCount="1" prefHeight="14.0" prefWidth="21.0" snapToTicks="true" />
+                                          <Label text="自动">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                    <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                    <HBox spacing="50.0">
+                                       <children>
+                                          <Button fx:id="adstop" minHeight="-Infinity" mnemonicParsing="false" onAction="#adstop_event" prefHeight="25.0" prefWidth="60.0" text="停止">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="adstart" minHeight="-Infinity" mnemonicParsing="false" onAction="#adstart_event" prefHeight="25.0" prefWidth="60.0" text="启动" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </bottom>
+                     <center>
+                        <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="251.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

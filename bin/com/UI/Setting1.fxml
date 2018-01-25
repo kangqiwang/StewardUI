@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import ensemble.samples.controls.tree.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Setting1_controller">
+   <children>
+      <BorderPane layoutX="-43.0" layoutY="-186.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <center>
+            <SplitPane dividerPositions="0.3387096774193548" layoutX="60.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity">
+                     <children>
+                        <VBox layoutX="2.0" layoutY="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="7.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="7.0" text="角色名称" />
+                                    
+                                    <ChoiceBox fx:id="choiceBox" layoutX="26.0" layoutY="34.0" onContextMenuRequested="#choicebox_event" prefHeight="23.0" prefWidth="135.0" />
+                                 		
+                                 </children>
+                              </VBox>
+                              <Label maxHeight="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                              <VBox layoutX="2.0" layoutY="119.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="119.0" text="角色描述" />
+                                    <TextArea layoutX="2.0" layoutY="134.0" prefHeight="182.0" prefWidth="186.0" wrapText="true" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="treeAnchorpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <TreeView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="20.0" spacing="90.0">
+                           <children>
+                              <Button fx:id="ok_setting1" minHeight="-Infinity" mnemonicParsing="false" onAction="#ok" prefHeight="25.0" prefWidth="60.0" text="确定" />
+                              <Button fx:id="concel_setting1" minHeight="-Infinity" mnemonicParsing="false" onAction="#concel" prefHeight="25.0" prefWidth="60.0" text="取消">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Adcontroller">
+   <children>
+      <VBox prefHeight="505.0" prefWidth="776.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <TableView fx:id="adtableview" editable="true" mouseTransparent="true" prefHeight="900.0">
+              <columns>
+                <TableColumn fx:id="managenumber" prefWidth="84.0" text="管理编号" />
+                <TableColumn fx:id="decoratebuild" prefWidth="79.0" text="布置建筑" />
+                  <TableColumn fx:id="devicetype" prefWidth="179.0" text="设备类型" />
+                  <TableColumn fx:id="devicenumber" prefWidth="75.0" text="设备编号" />
+                  <TableColumn prefWidth="75.0" text="运行状态">
+                     <columns>
+                        <TableColumn fx:id="start" prefWidth="147.0" text="启动" />
+                        <TableColumn fx:id="stop" prefWidth="75.0" text="停止" />
+                        <TableColumn fx:id="normal" prefWidth="75.0" text="正常" />
+                        <TableColumn fx:id="abnormal" prefWidth="75.0" text="异常" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="运行参数">
+                     <columns>
+                        <TableColumn fx:id="devicetemperature" prefWidth="75.0" text="设备温度" />
+                        <TableColumn fx:id="waterH" prefWidth="75.0" text="水位H" />
+                        <TableColumn fx:id="waterL" prefWidth="75.0" text="水位L" />
+                        <TableColumn fx:id="water" prefWidth="75.0" text="水位" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="90.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label text="手动" />
+                        <Slider fx:id="auto_or_manual" blockIncrement="5.0" majorTickUnit="2.0" max="1.0" minorTickCount="1" prefHeight="14.0" prefWidth="23.0" snapToPixel="false" snapToTicks="true" />
+                        <Label text="自动" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <HBox spacing="20.0">
+                     <children>
+                        <Button fx:id="adstop" mnemonicParsing="false" onAction="#adstop_action" text="停止" />
+                        <Button fx:id="adstart" mnemonicParsing="false" onAction="#adstart_action" text="启动" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+        </children>
+      </VBox>
+   </children>
+</AnchorPane>

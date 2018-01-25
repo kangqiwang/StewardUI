@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="lib/controlsfx-8.20.8.jar"/>
+	<classpathentry kind="lib" path="lib/datastore-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.32-bin.jar"/>
+	<classpathentry kind="lib" path="lib/jfxtras-labs-samples-8.0-r4-SNAPSHOT-shadow.jar"/>
+	<classpathentry kind="lib" path="lib/Ensemble.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

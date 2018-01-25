@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Setting3_controller">
+   <children>
+      <VBox layoutX="77.0" layoutY="25.0" prefHeight="550.0" prefWidth="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox spacing="120.0">
+               <children>
+                  <VBox prefHeight="245.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="任务类型" />
+                              <ChoiceBox fx:id="tasktype" prefHeight="23.0" prefWidth="170.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="15.0" prefWidth="60.0" text="启动日期" GridPane.rowIndex="1">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <DatePicker />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefWidth="65.0" text="停止日期" />
+                              <DatePicker />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label layoutY="4.0" text="设备编号" GridPane.columnIndex="1" />
+                              <ChoiceBox fx:id="devicenumber" prefHeight="23.0" prefWidth="150.0" GridPane.columnIndex="1" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefWidth="65.0" text="启动时间" />
+                              <LocalTimeTextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="23.0" prefWidth="134.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label prefWidth="65.0" text="停止时间" />
+                              <LocalTimeTextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="133.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="75.0" prefWidth="580.0">
+               <children>
+                  <Label text="重复周期 ：" VBox.vgrow="SOMETIMES">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label minHeight="-Infinity" prefHeight="5.0" VBox.vgrow="ALWAYS" />
+                  <HBox layoutX="86.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" VBox.vgrow="SOMETIMES">
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                        <HBox layoutX="124.0" layoutY="270.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button layoutX="124.0" layoutY="270.0" mnemonicParsing="false" text="周日" />
+                              <Button layoutX="179.0" layoutY="270.0" mnemonicParsing="false" text="周一" />
+                              <Button layoutX="234.0" layoutY="270.0" mnemonicParsing="false" text="周二" />
+                              <Button layoutX="289.0" layoutY="270.0" mnemonicParsing="false" text="周三" />
+                              <Button layoutX="344.0" layoutY="270.0" mnemonicParsing="false" text="周四" />
+                              <Button layoutX="399.0" layoutY="270.0" mnemonicParsing="false" text="周五" />
+                              <Button layoutX="454.0" layoutY="270.0" mnemonicParsing="false" text="周六" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox layoutX="163.0" layoutY="321.0" prefHeight="23.0" prefWidth="255.0">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <Button layoutX="163.0" layoutY="321.0" mnemonicParsing="false" text="确定" />
+                  <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <Button layoutX="307.0" layoutY="321.0" mnemonicParsing="false" text="取消" />
+                  <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

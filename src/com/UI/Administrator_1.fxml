@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox prefHeight="505.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Adcontroller">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="设定">
+          <items>
+            <MenuItem fx:id="user_Setting" mnemonicParsing="false" onAction="#user_Setting_event" text="用户注册" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="warrant_Setting" mnemonicParsing="false" onAction="#warrant_Setting_event" text="授权设定" />
+            <MenuItem fx:id="device_Setting" mnemonicParsing="false" onAction="#device_Setting_event" text="设备设定" />
+            <MenuItem fx:id="task_Setting" mnemonicParsing="false" onAction="#task_Setting_event" text="任务设定" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="查看">
+          <items>
+            <MenuItem fx:id="run_check" mnemonicParsing="false" onAction="#run_check_event" text="运行状态" />
+            <MenuItem fx:id="device_check" mnemonicParsing="false" onAction="#device_check_event" text="设备能耗" />
+            <MenuItem fx:id="ui_check" mnemonicParsing="false" onAction="#ui_check_event" text="U-T,I-T图" />
+            <MenuItem fx:id="qt_check" mnemonicParsing="false" onAction="#qt_check_event" text="Q-T图" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="查询">
+          <items>
+            <MenuItem fx:id="date_inquire" mnemonicParsing="false" onAction="#data_inquire_event" text="按日期查询" />
+                  <MenuItem fx:id="device_inquire" mnemonicParsing="false" onAction="#device_inquire_event" text="按设备类型查询" />
+                  <MenuItem fx:id="build_inquire" mnemonicParsing="false" onAction="#build_inquire_event" text="按建筑查询" />
+                  <MenuItem fx:id="person_inquire" mnemonicParsing="false" onAction="#person_inquire_event" text="按值班员查询" />
+                  <MenuItem fx:id="abnormal_inquire" mnemonicParsing="false" onAction="#abnormal_inquire_event" text="异常记录查询" />
+                  <MenuItem fx:id="repair_inquire" mnemonicParsing="false" onAction="#repair_inquire_event" text="检修记录查询" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="管理">
+              <items>
+                <MenuItem fx:id="device_manage" mnemonicParsing="false" onAction="#device_manage_event" text="设备管理" />
+                  <MenuItem fx:id="service_manage" mnemonicParsing="false" onAction="#service_manage_event" text="服务管理" />
+                  <MenuItem fx:id="journal_manage" mnemonicParsing="false" onAction="#journal_manage_event" text="日志管理" />
+                  <MenuItem fx:id="repair_manage" mnemonicParsing="false" onAction="#repair_manage_event" text="检修管理" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="打印">
+              <items>
+                <MenuItem fx:id="journal_print" mnemonicParsing="false" onAction="#journal_print_event" text="日志" />
+                  <MenuItem fx:id="abnormal_print" mnemonicParsing="false" onAction="#abnormal_print_event" text="异常记录" />
+                  <MenuItem fx:id="repair_print" mnemonicParsing="false" onAction="#repair_print_event" text="检修记录" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+              <items>
+                  <MenuItem fx:id="handbook_help" mnemonicParsing="false" onAction="#handbook_help_event" text="使用手册" />
+                <MenuItem fx:id="us_help" mnemonicParsing="false" onAction="#us_help_event" text="联系我们" />
+                  <MenuItem fx:id="state_help" mnemonicParsing="false" onAction="#state_help_event" text="版权声明" />
+              </items>
+            </Menu>
+      </menus>
+         <opaqueInsets>
+            <Insets right="2.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets right="2.0" />
+         </VBox.margin>
+    </MenuBar>
+      <TableView editable="true" mouseTransparent="true" prefHeight="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="managenumber" prefWidth="84.0" text="管理编号" />
+          <TableColumn fx:id="decoratebuild" prefWidth="79.0" text="布置建筑" />
+            <TableColumn fx:id="devicetype" prefWidth="179.0" text="设备类型" />
+            <TableColumn fx:id="devicenumber" prefWidth="75.0" text="设备编号" />
+            <TableColumn prefWidth="75.0" text="运行状态">
+               <columns>
+                  <TableColumn fx:id="start" prefWidth="147.0" text="启动" />
+                  <TableColumn fx:id="stop" prefWidth="75.0" text="停止" />
+                  <TableColumn fx:id="normal" prefWidth="75.0" text="正常" />
+                  <TableColumn fx:id="abnormal" prefWidth="75.0" text="异常" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="运行参数">
+               <columns>
+                  <TableColumn fx:id="devicetemperature" prefWidth="75.0" text="设备温度" />
+                  <TableColumn fx:id="waterH" prefWidth="75.0" text="水位H" />
+                  <TableColumn fx:id="waterL" prefWidth="75.0" text="水位L" />
+                  <TableColumn fx:id="water" prefWidth="75.0" text="水位" />
+               </columns>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="90.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="手动" />
+                  <Slider fx:id="auto_or_manual" blockIncrement="5.0" majorTickUnit="2.0" max="2.0" minorTickCount="1" onMouseClicked="#auto_or_manual" prefHeight="14.0" prefWidth="23.0" snapToPixel="false" snapToTicks="true" />
+                  <Label text="自动" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <HBox spacing="20.0">
+               <children>
+                  <Button fx:id="adstop" mnemonicParsing="false" onAction="#adstop_action" text="停止" />
+                  <Button fx:id="adstart" mnemonicParsing="false" onAction="#adstart_action" text="启动" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+  </children>
+</VBox>

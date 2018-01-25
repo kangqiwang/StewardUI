@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Check_1_controller">
+   <children>
+      <TableView fx:id="Check_2_tableview" layoutX="-329.0" layoutY="14.0" maxHeight="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="info_id" prefWidth="75.0" text="管理编号" />
+          <TableColumn fx:id="device_position" prefWidth="75.0" text="布置建筑" />
+            <TableColumn fx:id="device_type_name" prefWidth="75.0" text="设备类型" />
+            <TableColumn fx:id="device_id" prefWidth="75.0" text="设备编号" />
+            <TableColumn prefWidth="75.0" text="运行状态">
+               <columns>
+                  <TableColumn fx:id="start" prefWidth="75.0" text="启动" />
+                  <TableColumn fx:id="stop" prefWidth="75.0" text="停止" />
+                  <TableColumn fx:id="normal" prefWidth="75.0" text="正常" />
+                  <TableColumn fx:id="abnormal" prefWidth="75.0" text="异常" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="运行参数">
+               <columns>
+                  <TableColumn fx:id="overcurrent_alert_threshold" prefWidth="75.0" text="超载电流" />
+                  <TableColumn fx:id="overcurrent_stop_threshold" prefWidth="75.0" text="当前电流" />
+                  <TableColumn fx:id="overvoltage_alert_threshold" prefWidth="75.0" text="超载电压" />
+                  <TableColumn fx:id="overvoltage_stop_threshold" prefWidth="75.0" text="当前电压" />
+               </columns>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

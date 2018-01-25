@@ -1,0 +1,55 @@
+.root{
+	-fx-base: #E8E8EC;
+	//-fx-background-color:#2D2D30;
+}
+
+#HBox{
+	-fx-background-color:#B4CDE6;
+}
+
+.menu-bar{
+ -fx-background-color: linear-gradient(to bottom, derive(-fx-color,100%), derive(-fx-color,-100%)), -fx-body-color;
+ 
+	-fx-background-color:#B4CDE6;
+}
+
+.menu-button:hover{
+	-fx-background-color:#B4CDE6;
+}
+
+.menu-item{
+	-fx-background-color:#B4CDE6;
+	-fx-border-color:#FFFFFF;
+}
+.context-menu{
+	-fx-border-color:#FFFFFF;
+}
+.menu .label{
+	-fx-text-fill:#1B293E;
+}
+
+.table-column{
+	-fx-background-color:#D6DBE9;
+	//-fx-border-left-color:#3F3F46;
+	-fx-border-color:#FFFFFF;
+}
+.table-view{
+	-fx-background-color:#FFFFFF;
+	-fx-border-color:#FFFFFF;
+}
+
+.label{
+	-fx-text-fill: #1B293E;
+}
+.button{
+	-fx-background-color:#2D2D30;
+	-fx-text-fill:#DDDDDD;
+	-fx-border-color:#FFFFFF;
+	-fx-border-width:1;
+}
+.button:hover{
+	-fx-background-color:#B4CDE6;
+	-fx-text-fill:#DDDDDD;
+	-fx-border-color:#B4CDE6;
+	-fx-border-width:1;
+}

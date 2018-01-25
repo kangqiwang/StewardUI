@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inquire_6_controller">
+   <children>
+      <TableView fx:id="inquire_6_tableview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="repair_id" prefWidth="75.0" text="序号" />
+          <TableColumn fx:id="device_id" prefWidth="75.0" text="设备编号" />
+            <TableColumn fx:id="device_name" prefWidth="75.0" text="设备名称" />
+            <TableColumn fx:id="repair_time" prefWidth="75.0" text="检修时间" />
+            <TableColumn fx:id="repair_position" prefWidth="75.0" text="检修地点" />
+            <TableColumn fx:id="repair_cause" prefWidth="75.0" text="检修原因" />
+            <TableColumn fx:id="repairman" prefWidth="75.0" text="检修人" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

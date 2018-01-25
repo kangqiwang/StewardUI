@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="24.0" layoutY="21.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/phone.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/wechat.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/qq.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/ie.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/company.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="300.0" layoutY="21.0" spacing="15.0">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="300.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/electrograph.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="300.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/xinxiang.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="301.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/contact.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="307.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/E-mai.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="300.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../photo/bus.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox layoutX="110.0" layoutY="39.0" spacing="50.0">
+         <children>
+            <Label layoutX="110.0" layoutY="39.0" text="客服专线" />
+            <Label layoutX="110.0" layoutY="103.0" text="微信" />
+            <Label layoutX="110.0" layoutY="223.0" text="QQ" />
+            <Label layoutX="110.0" layoutY="276.0" text="网址" />
+            <Label text="地址" />
+         </children>
+      </VBox>
+      <VBox layoutX="398.0" layoutY="39.0" spacing="50.0">
+         <children>
+            <Label layoutX="398.0" layoutY="39.0" text="电话" />
+            <Label layoutX="398.0" layoutY="103.0" text="邮编" />
+            <Label layoutX="398.0" layoutY="161.0" text="contact" />
+            <Label layoutX="398.0" layoutY="223.0" text="E-mai" />
+            <Label layoutX="398.0" layoutY="284.0" text="乘车路线" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

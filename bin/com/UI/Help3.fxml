@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Help3_controller">
+   <children>
+      <Label layoutX="28.0" layoutY="21.0" text="昱通智能物业管家声明">
+         <font>
+            <Font name="Arial Unicode MS" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="92.0" prefHeight="69.0" prefWidth="535.0" text="     本产品所有权归西安昱通电器技术公司所有。其软件著作权和国际公约保护，任何单位和个人未经授权擅自复制或者传播本软件部分或全部，可能受到严厉的民事或刑事制裁，并将在法律范围内受到最大可能的起诉" wrapText="true" />
+      <VBox layoutX="68.0" layoutY="212.0">
+         <children>
+            <Label layoutX="68.0" layoutY="212.0" prefHeight="15.0" prefWidth="112.0" text="本产品使用权属于:" />
+            <Label layoutX="68.0" layoutY="237.0" text="USER:" />
+            <Label layoutX="68.0" layoutY="272.0" text="PRODUCT  ID:" />
+         </children>
+      </VBox>
+      <VBox layoutX="180.0" layoutY="212.0">
+         <children>
+            <Label layoutX="208.0" layoutY="212.0" />
+            <Label layoutX="180.0" layoutY="235.0" />
+            <Label layoutX="180.0" layoutY="272.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="180.0" layoutY="212.0">
+         <children>
+            <Label fx:id="belong" layoutX="180.0" layoutY="212.0" />
+            <Label fx:id="user" layoutX="180.0" layoutY="227.0" />
+            <Label fx:id="id" layoutX="180.0" layoutY="242.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

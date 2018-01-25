@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.inquire_2_controller">
+   <children>
+      <TableView fx:id="inquire_2_tableview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="schedule_id" prefWidth="75.0" text="序号" />
+          <TableColumn fx:id="cycle_id" prefWidth="75.0" text="循环周期" />
+            <TableColumn fx:id="period_start_time" prefWidth="75.0" text="开始时间" />
+            <TableColumn fx:id="period_end_time" prefWidth="75.0" text="停止日期" />
+            <TableColumn fx:id="device_type" prefWidth="75.0" text="设备类型" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,1544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Desktop_unlogin_controller">
+   <children>
+      <SplitPane fx:id="splitpane" dividerPositions="0.88" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TabPane layoutX="-2.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="40.0" tabMaxWidth="70.0" tabMinHeight="40.0" tabMinWidth="70.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="照明">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="44.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="44.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="50.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin></Circle>
+                                                      <Circle fx:id="start_light" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin></Circle>
+                                                      <Circle fx:id="stop_light" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <AnchorPane layoutX="62.0" layoutY="70.0" prefHeight="127.0" prefWidth="180.0" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="70.0">
+                                                   <children>
+                                                      <VBox layoutX="10.0" layoutY="10.0" prefHeight="117.0" prefWidth="170.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                         <children>
+                                                            <Label fx:id="label_001" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="voltage：" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                            <Label fx:id="label_002" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="current：" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                            <Label fx:id="label_003" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="brightness：" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light1" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light1" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light1" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light1" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <AnchorPane layoutX="62.0" layoutY="70.0" prefHeight="129.0" prefWidth="178.0">
+                                                   <children>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                         <children>
+                                                            <Label fx:id="label_004" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="voltage：" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                            <Label fx:id="label_005" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="current：" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                            <Label fx:id="label_006" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="brightness：" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light2" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light2" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light2" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light2" fill="#666666" radius="19.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <AnchorPane layoutX="62.0" layoutY="70.0" prefHeight="126.0" prefWidth="181.0">
+                                                   <children>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                         <children>
+                                                            <Label fx:id="label_007" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="voltage：" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                            <Label fx:id="label_008" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="current：" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                            <Label fx:id="label_009" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="brightness：" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                        <Tab text="给水">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border1" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img1" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light11" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light11" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light111" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light111" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light111" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light111" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                        <Tab text="电梯">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border2" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img2" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light11" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light11" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light112" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light112" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light112" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light112" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1112" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                        <Tab text="空调">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border3" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img3" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light11" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light11" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light113" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light113" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light113" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light113" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1113" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                        <Tab text="排风">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border4" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img4" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light11" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light11" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light114" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light114" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light114" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light114" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1114" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                        <Tab text="排水">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border5" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img5" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light11" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light11" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light115" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light115" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light115" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light115" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1115" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                        <Tab text="新风机组">
+                           <content>
+                              <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="50.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <BorderPane fx:id="border6" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <ImageView fx:id="img6" fitHeight="321.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@../photo/control.jpg" />
+                                                   </image>
+                                                   <viewport>
+                                                      <Rectangle2D />
+                                                   </viewport>
+                                                </ImageView>
+                                             </center>
+                                          </BorderPane>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_11" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="20.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light11" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light11" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light11" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_111" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane layoutX="540.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="321.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../photo/control.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane>
+                                             <children>
+                                                <GridPane alignment="CENTER_LEFT" layoutX="68.0" layoutY="218.0" prefHeight="43.0" prefWidth="172.0" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="218.0">
+                                                   <children>
+                                                      <Circle fx:id="abnormal_light116" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="start_light116" fill="#36ff1f" radius="16.0" stroke="BLACK" strokeType="INSIDE">
+                                                         <GridPane.margin>
+                                                            <Insets />
+                                                         </GridPane.margin>
+                                                      </Circle>
+                                                      <Circle fx:id="stop_light116" fill="#ff1f1f" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                                                      <Circle fx:id="normal_light116" fill="#1fff3e" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="48.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="47.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="45.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="48.0" minWidth="6.0" prefWidth="35.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Pane layoutX="62.0" layoutY="70.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <VBox>
+                                             <children>
+                                                <AnchorPane prefHeight="212.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                                                <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0">
+                                                   <children>
+                                                      <HBox layoutY="-1.0" prefHeight="433.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                            <Label fx:id="device_number_1116" text="1#-A1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <VBox.margin>
+                                                                  <Insets left="100.0" top="390.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <HBox layoutX="8.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" spacing="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <HBox layoutX="8.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+                           <children>
+                              <Button fx:id="login" layoutX="8.0" layoutY="9.0" mnemonicParsing="false" onAction="#login_event" prefHeight="34.0" prefWidth="70.0" text="登录" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox layoutX="624.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+                           <children>
+                              <Button fx:id="page_up" layoutX="649.0" layoutY="9.0" mnemonicParsing="false" onAction="#page_up_event" prefHeight="34.0" prefWidth="70.0" text="上一页" />
+                              <Button fx:id="page_down" layoutX="734.0" layoutY="9.0" mnemonicParsing="false" onAction="#page_down_event" prefHeight="34.0" prefWidth="70.0" text="下一页" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" right="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
